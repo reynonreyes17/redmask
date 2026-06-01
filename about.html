@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Milky Makers — UAE's Milk-Powered Skincare Brand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;--white:#fff;
+  --cream:#fdf9f4;--cream2:#f5ede0;
+  --gold:#c9a96e;--gold-light:#e8d5b0;
+  --text:#1a1a1a;--muted:#555;--light:#999;
+  --border:#ecddd0;--green:#2d6a4f;
+  --milk:#fff8f0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ANN */
+.ann{background:var(--black);color:#fff;text-align:center;padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+
+/* HEADER */
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 40px}
+.hdr{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--black)}
+.logo em{font-style:normal;color:var(--gold)}
+nav{display:flex;gap:32px}
+nav a{font-size:13px;font-weight:500;letter-spacing:.04em;transition:color .2s;color:var(--text)}
+nav a:hover{color:var(--gold)}
+nav a.active{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.hdr-icons{display:flex;gap:18px;align-items:center;font-size:13px}
+.lang{border:1px solid var(--border);padding:4px 10px;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer}
+
+/* HERO */
+.about-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden}
+.about-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,7,4,.88) 0%,rgba(10,7,4,.45) 50%,rgba(10,7,4,.08) 100%)}
+.about-hero-content{position:relative;z-index:2;padding:64px 80px;max-width:860px}
+.about-hero-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.about-hero-content h1{font-family:'DM Serif Display',serif;font-size:50px;line-height:1.1;color:#fff;font-weight:400;margin-bottom:18px}
+.about-hero-content p{font-size:16px;color:rgba(255,255,255,.78);line-height:1.7;max-width:540px}
+
+/* MAIN CONTENT WRAPPER */
+.about-content{max-width:800px;margin:0 auto;padding:80px 40px 88px}
+
+/* SECTION */
+.ab-section{margin-bottom:60px}
+.ab-section h2{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;margin-bottom:22px;line-height:1.2}
+.ab-section h3{font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text);letter-spacing:.01em}
+.ab-section p{font-size:15.5px;line-height:1.82;color:var(--muted);margin-bottom:20px}
+.ab-section p:last-child{margin-bottom:0}
+.ab-section p em{font-style:italic;color:var(--text)}
+.ab-section p strong{color:var(--text);font-weight:600}
+hr.divider{border:none;border-top:1px solid var(--border);margin:60px 0}
+
+/* PULL QUOTE */
+.pull-quote{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;line-height:1.4;color:var(--text);border-left:4px solid var(--gold);padding:20px 28px;margin:40px 0;font-style:italic}
+
+/* INGREDIENT CARD */
+.ingredient-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.ing-card{background:var(--milk);border:1px solid var(--border);border-radius:12px;padding:24px 26px}
+.ing-card .ing-icon{font-size:28px;margin-bottom:12px}
+.ing-card h4{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.ing-card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+
+/* IMAGE BREAK */
+.img-break{width:100%;margin:52px 0;border-radius:14px;overflow:hidden;max-height:440px}
+.img-break img{width:100%;height:100%;object-fit:cover}
+
+/* IMAGE GRID */
+.img-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:40px 0}
+.img-grid img{width:100%;height:280px;object-fit:cover;border-radius:10px}
+
+/* STATS */
+.stats{background:var(--cream2);border:1px solid var(--border);border-radius:14px;padding:44px 40px;margin-bottom:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.stat{text-align:center}
+.stat-num{font-family:'DM Serif Display',serif;font-size:44px;font-weight:400;display:block;margin-bottom:8px;color:var(--text)}
+.stat-lbl{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* CLIMATE LIST */
+.climate-list{list-style:none;margin:18px 0 22px}
+.climate-list li{font-size:15px;color:var(--muted);line-height:1.72;padding:10px 0 10px 28px;border-bottom:1px solid var(--border);position:relative}
+.climate-list li:last-child{border-bottom:none}
+.climate-list li::before{content:'→';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+/* DARK CALLOUT */
+.dark-callout{background:var(--black);border-radius:14px;padding:48px;margin-bottom:60px}
+.dark-callout-badge{display:inline-flex;align-items:center;gap:12px;background:#1a1a1a;border:1px solid #2e2e2e;border-radius:8px;padding:14px 20px;margin-bottom:24px}
+.dark-callout-badge .badge-icon{font-size:26px}
+.dark-callout-badge .badge-text strong{color:#fff;display:block;font-size:14px;margin-bottom:3px}
+.dark-callout-badge .badge-text span{font-size:12px;color:#aaa}
+.dark-callout h3{font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;color:#fff;margin-bottom:18px}
+.dark-callout p{font-size:15px;color:#ccc;line-height:1.78;margin-bottom:16px}
+.dark-callout p:last-child{margin-bottom:0}
+
+/* PRESS */
+.press-list{margin-bottom:60px}
+.press-list h2{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;margin-bottom:28px}
+.press-item{padding:18px 0;border-bottom:1px solid var(--border)}
+.press-item:first-of-type{border-top:1px solid var(--border)}
+.press-item strong{font-size:15px;font-weight:700;margin-right:8px;color:var(--text)}
+.press-item span{font-size:15px;color:var(--muted);line-height:1.65}
+
+/* MISSION */
+.mission-blk{background:var(--cream2);border-left:4px solid var(--gold);padding:36px 40px;border-radius:0 12px 12px 0;margin-bottom:44px}
+.mission-blk p{font-size:17px;line-height:1.82;color:var(--muted);font-style:italic;margin:0}
+
+/* PROMISE GRID */
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:52px}
+.promise-card{background:var(--milk);border:1px solid var(--border);border-radius:10px;padding:24px 26px}
+.promise-card .icon{font-size:24px;margin-bottom:12px}
+.promise-card h4{font-size:14px;font-weight:700;margin-bottom:7px}
+.promise-card p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
+
+/* CLOSING */
+.closing{font-size:18px;font-style:italic;color:var(--muted);margin-bottom:28px;line-height:1.7;font-family:'DM Serif Display',serif;font-weight:400}
+.cta-link{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;border-bottom:2px solid var(--gold);padding-bottom:3px;transition:color .2s;color:var(--text)}
+.cta-link:hover{color:var(--gold)}
+
+/* EMAIL */
+.email-sg{background:var(--black);padding:64px 40px}
+.email-inner{max-width:500px;margin:0 auto;text-align:center}
+.email-inner p{color:#aaa;font-size:14px;margin-bottom:20px;line-height:1.6}
+.email-form{display:flex;max-width:400px;margin:0 auto}
+.email-form input{flex:1;padding:14px 18px;border:1px solid #333;background:#111;color:#fff;font-size:14px;outline:none;border-right:none;font-family:'DM Sans',sans-serif}
+.email-form input::placeholder{color:#666}
+.email-form button{background:var(--gold);color:#fff;border:none;padding:14px 22px;cursor:pointer;font-size:16px;transition:background .2s}
+.email-form button:hover{background:#b8934d}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid #1a1a1a;padding:40px}
+.ft-row{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-links{display:flex;gap:24px;flex-wrap:wrap}
+.ft-links a{color:#777;font-size:12px;transition:color .2s}
+.ft-links a:hover{color:#fff}
+.ft-copy{color:#444;font-size:12px}
+.ft-social{display:flex;gap:14px}
+.ft-social a{color:#777;font-size:13px;transition:color .2s}
+.ft-social a:hover{color:#fff}
+.pay-ic{display:inline-block;background:#111;border:1px solid #222;border-radius:4px;padding:4px 8px;font-size:9px;color:#666;font-weight:700;margin:2px}
+
+@media(max-width:720px){
+  .about-hero-content{padding:48px 28px}
+  .about-hero-content h1{font-size:34px}
+  .about-content{padding:52px 24px 64px}
+  .stats{grid-template-columns:1fr;gap:24px}
+  .promise-grid{grid-template-columns:1fr}
+  .ingredient-cards{grid-template-columns:1fr}
+  .img-grid{grid-template-columns:1fr}
+  header{padding:0 20px}
+  .dark-callout{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">Free Next Day Delivery in UAE 🇦🇪</div>
+
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">Milky <em>Makers</em></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+    <div class="hdr-icons">
+      <span class="lang">English ▾</span>
+      <a href="#">🔍</a><a href="#">👤</a><a href="#">🛒</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="about-hero">
+  <img class="about-hero-img" src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-lifestyle.jpg?v=1779985664&width=1600" alt="Milky Makers About">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <div class="about-hero-tag">About Milky Makers</div>
+    <h1>UAE's Milk-Powered Skincare Brand</h1>
+    <p>Built in the UAE, for the UAE. Seriously formulated with milk-derived actives, and designed around the specific realities of living and caring for your skin in this part of the world.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="about-content">
+
+  <!-- THE NAME -->
+  <div class="ab-section">
+    <h2>About Milky Makers</h2>
+    <h3>The Name</h3>
+    <p><em>Milky</em> speaks to richness, nourishment, and the kind of deep softness that healthy skin is known for. <em>Makers</em> is about intention — crafted deliberately, not mass-produced. Because everything we do at Milky Makers is about what your skin can become when it's genuinely fed, not just treated on the surface.</p>
+    <p>Milky Makers was built in the UAE, for the UAE. Not adapted from a brand designed for a different climate and a different consumer — built here, for the specific realities of living and caring for your skin in this part of the world.</p>
+  </div>
+
+  <div class="img-break">
+    <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-red-light.jpg?v=1779985759&width=1400" alt="Milky Makers skincare">
+  </div>
+
+  <hr class="divider">
+
+  <!-- WHY WE EXIST -->
+  <div class="ab-section">
+    <h3>Why We Exist</h3>
+    <p>The UAE is an extraordinary place to live. It is also an extraordinary environment for your skin to navigate. The UV Index regularly exceeds 10 — classified as extreme. Air conditioning runs continuously, stripping moisture from your skin for 18 hours a day. Humidity swings between 90% in August and 25% in February. Hard water disrupts your skin's pH. And professional skincare treatments cost hundreds of dirhams per session — making expert-level care inaccessible for most people on any kind of budget.</p>
+    <ul class="climate-list">
+      <li>UV Index regularly exceeds 10 — classified as extreme</li>
+      <li>Air conditioning strips moisture for up to 18 hours a day</li>
+      <li>Humidity swings between 90% in August and 25% in February</li>
+      <li>Hard water disrupts skin pH year-round</li>
+      <li>Professional skincare treatments cost hundreds of dirhams per session</li>
+    </ul>
+    <p>Milky Makers was founded because there was no skincare brand on the UAE market that addressed all of this honestly, affordably, and with the ingredient quality to justify the claims being made.</p>
+    <p>Our formulas are built around milk-derived actives — ingredients clinically recognised for their ability to deeply nourish, repair the skin barrier, and restore the kind of softness that the UAE climate works hard to take away. Rich in lactic acid, peptides, and proteins, milk has been used for skin health for centuries. We took that heritage and built a modern, science-backed skincare line around it.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><span class="stat-num">7</span><span class="stat-lbl">Emirates we deliver to, next day, free</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Cruelty-free, every product, always</span></div>
+    <div class="stat"><span class="stat-num">14</span><span class="stat-lbl">Days to return, no questions asked</span></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- OUR INGREDIENTS -->
+  <div class="ab-section">
+    <h3>Our Ingredients</h3>
+    <p>We don't use milk as a marketing story. We use it because it works.</p>
+
+    <div class="ingredient-cards">
+      <div class="ing-card">
+        <div class="ing-icon">🥛</div>
+        <h4>Lactic Acid</h4>
+        <p>Naturally occurring in milk, it is one of the gentlest and most effective exfoliants available. It dissolves dead skin cells, brightens uneven tone, and stimulates collagen production — without the irritation that harsher acids cause.</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">🧬</div>
+        <h4>Milk Proteins</h4>
+        <p>Strengthen the skin barrier — the invisible shield that keeps moisture in and irritants out. When that barrier is compromised, skin becomes reactive, dull, and dry. Our formulas are designed to rebuild it, session by session.</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">💧</div>
+        <h4>Peptides</h4>
+        <p>Signal the skin to produce more collagen and elastin — the proteins responsible for firmness and bounce. In the UAE climate, where collagen is depleted faster by UV stress, this is not optional. It is essential.</p>
+      </div>
+      <div class="ing-card">
+        <div class="ing-icon">✨</div>
+        <h4>Ceramides</h4>
+        <p>Lipid molecules that lock moisture into the skin and form a protective layer against environmental damage. Combined with milk proteins, they create a barrier strong enough to hold up against air conditioning and desert air.</p>
+      </div>
+    </div>
+
+    <div class="pull-quote">"In the UAE, where skin is constantly stressed by heat, UV exposure, and environmental dryness — what you put on your skin matters enormously."</div>
+  </div>
+
+  <div class="img-grid">
+    <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-front-view.jpg?v=1779986003&width=600" alt="Milky Makers product">
+    <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-packaging-unboxing.jpg?v=1779985884&width=600" alt="Milky Makers packaging">
+  </div>
+
+  <hr class="divider">
+
+  <!-- CLINICALLY CONSIDERED -->
+  <div class="dark-callout">
+    <div class="dark-callout-badge">
+      <div class="badge-icon">🔬</div>
+      <div class="badge-text"><strong>Clinically Considered</strong><span>Formulated with reference to peer-reviewed skin barrier science</span></div>
+    </div>
+    <h3>Clinically Considered</h3>
+    <p>Every Milky Makers product is formulated with reference to peer-reviewed research on milk-derived actives and skin barrier science. We don't make claims we can't back up. We don't add ingredients for marketing value. Everything in the formula is there because it has a demonstrated role to play in healthier, more resilient skin.</p>
+    <p>Lactic acid's efficacy as an AHA exfoliant is one of the most extensively documented in dermatology. Milk protein's role in barrier repair is supported by decades of cosmetic chemistry research. When we say our formulas are science-backed, we mean it in the literal sense — not as a brand promise dressed up as evidence.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BUILT FOR UAE SKIN -->
+  <div class="ab-section">
+    <h3>Built for UAE Skin</h3>
+    <p>Since launch, thousands of skin-conscious adults across the UAE — from Dubai to Abu Dhabi, from Sharjah to Fujairah — have made Milky Makers part of their daily routine. They are dealing with the same skin challenges you are: the UV, the AC, the humidity, the dullness, the sensitivity, the feeling that no matter what you put on your face, the environment undoes it by lunchtime.</p>
+    <p>Milky Makers was built for that reality. Not around it.</p>
+  </div>
+
+  <div class="img-break" style="max-height:380px">
+    <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-best-uae-dubai-delivery.jpg?v=1779985821&width=1400" alt="Milky Makers UAE">
+  </div>
+
+  <hr class="divider">
+
+  <!-- AS SEEN IN -->
+  <div class="press-list">
+    <h2>As Seen In</h2>
+    <div class="press-item"><strong>ELLE Arabia</strong><span>— Recognised Milky Makers for bringing a genuinely differentiated ingredient story to a crowded UAE skincare market, with particular praise for the brand's local focus.</span></div>
+    <div class="press-item"><strong>Vogue Arabia</strong><span>— Highlighted the milk-derived formula approach as one of the most thoughtful and skin-appropriate responses to the UAE's unique climate conditions.</span></div>
+    <div class="press-item"><strong>Grazia Middle East</strong><span>— Featured Milky Makers as a standout indie brand redefining what nourishing skincare means for women living and working in the Gulf.</span></div>
+    <div class="press-item"><strong>Harper's Bazaar Arabia</strong><span>— Praised the brand's commitment to honest ingredient labelling and its refusal to rely on filler formulas.</span></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- MISSION -->
+  <div class="ab-section">
+    <h3>Our Mission</h3>
+    <div class="mission-blk">
+      <p>Skin that feels genuinely nourished shouldn't require a clinic appointment, a waiting list, or a monthly budget that most people cannot sustain. Our mission is to put seriously formulated, milk-powered skincare in the hands of every skin-conscious adult in the UAE who wants real results — on their own terms, in their own time, at home.</p>
+    </div>
+
+    <div class="promise-grid">
+      <div class="promise-card">
+        <div class="icon">🐰</div>
+        <h4>Cruelty-Free, Always</h4>
+        <p>Every Milky Makers product is cruelty-free. No exceptions, no asterisks.</p>
+      </div>
+      <div class="promise-card">
+        <div class="icon">🚚</div>
+        <h4>Free Next-Day Delivery</h4>
+        <p>Free next-day delivery across all 7 Emirates on every order.</p>
+      </div>
+      <div class="promise-card">
+        <div class="icon">↩</div>
+        <h4>14-Day Returns</h4>
+        <p>A hassle-free 14-day return policy. No questions asked, no forms to fill.</p>
+      </div>
+      <div class="promise-card">
+        <div class="icon">💬</div>
+        <h4>Support That Responds</h4>
+        <p>A real support team that actually responds — and actually helps.</p>
+      </div>
+    </div>
+
+    <p class="closing">The softest skin of your life starts here.</p>
+    <a href="product.html" class="cta-link">Shop Milky Makers →</a>
+  </div>
+
+</div>
+
+<!-- EMAIL -->
+<div class="email-sg">
+  <div class="email-inner">
+    <p>Nourish with us — get skincare tips &amp; offers delivered to your inbox</p>
+    <div class="email-form">
+      <input type="email" placeholder="Your email address">
+      <button>→</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-row">
+    <div class="ft-copy">© 2026, Milky Makers</div>
+    <div class="ft-links">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of service</a>
+      <a href="#">Refund policy</a>
+      <a href="#">Shipping policy</a>
+    </div>
+    <div class="ft-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="ft-row" style="margin-top:16px">
+    <div>
+      <span class="pay-ic">VISA</span>
+      <span class="pay-ic">MC</span>
+      <span class="pay-ic">AMEX</span>
+      <span class="pay-ic">APPLE PAY</span>
+      <span class="pay-ic">GOOGLE PAY</span>
+      <span class="pay-ic">TABBY</span>
+    </div>
+    <select style="background:#111;color:#777;border:1px solid #222;padding:6px 12px;font-size:12px;border-radius:4px">
+      <option>English</option>
+    </select>
+  </div>
+</footer>
+
+</body>
+</html>

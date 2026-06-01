@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkinMirae Advanced LED Light Therapy Mask | UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0a0a0a;--white:#fff;--cream:#f9f6f1;--gold:#c9a96e;--text:#1a1a1a;--muted:#666;--light:#999;--border:#e5e0d8;--green:#2d6a4f}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.ann{background:var(--black);color:#fff;text-align:center;padding:10px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 40px}
+.hdr{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:32px}
+nav a{font-size:13px;font-weight:500;letter-spacing:.04em;transition:color .2s}
+nav a:hover{color:var(--gold)}
+nav a.active{color:var(--gold);font-weight:700}
+.hdr-icons{display:flex;gap:18px;align-items:center;font-size:13px}
+.lang{border:1px solid var(--border);padding:4px 10px;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer}
+
+/* BREADCRUMB */
+.bc{max-width:1280px;margin:0 auto;padding:16px 40px;font-size:12px;color:var(--light);display:flex;gap:8px}
+.bc a{color:var(--light)}
+.bc a:hover{color:var(--text)}
+
+/* PRODUCT LAYOUT */
+.prod-layout{max-width:1280px;margin:0 auto;padding:0 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+
+/* GALLERY */
+.gallery{position:sticky;top:80px}
+.gallery-main{width:100%;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--cream);margin-bottom:12px;position:relative}
+.gallery-main img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.sold-out-badge{position:absolute;top:16px;left:16px;background:var(--black);color:#fff;font-size:11px;font-weight:600;padding:6px 14px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;z-index:2}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.g-thumb{aspect-ratio:1;border-radius:8px;border:2px solid transparent;cursor:pointer;overflow:hidden;transition:border-color .2s}
+.g-thumb.active{border-color:var(--black)}
+.g-thumb:hover:not(.active){border-color:#aaa}
+.g-thumb img{width:100%;height:100%;object-fit:cover}
+
+/* PRODUCT INFO */
+.prod-info{padding-top:8px}
+.prod-rating{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stars{color:#f59e0b;font-size:15px}
+.prod-rating .cnt{font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer}
+.prod-info h1{font-family:'DM Serif Display',serif;font-size:42px;font-weight:400;line-height:1.15;margin-bottom:20px}
+.badges{display:flex;flex-direction:column;gap:9px;margin-bottom:22px}
+.badge-r{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.chk{width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2.5}
+.price-blk{margin-bottom:20px}
+.price-main{font-size:34px;font-weight:700}
+.price-main .cur{font-size:22px;font-weight:500}
+.price-main .aed{font-size:15px;color:var(--light);font-weight:400;margin-left:4px}
+.klarna{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:6px}
+.klarna-badge{background:#ffb3c7;color:#000;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:.03em}
+.klarna a{color:var(--gold)}
+.variants{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.variant{border:2px solid var(--border);border-radius:10px;padding:15px 18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s}
+.variant.active{border-color:var(--black);background:#fafafa}
+.variant:hover:not(.active){border-color:#bbb}
+.v-name{font-size:14px;font-weight:600}
+.v-desc{font-size:12px;color:var(--muted);margin-top:2px}
+.v-badge{background:var(--black);color:#fff;font-size:10px;padding:3px 8px;border-radius:20px;font-weight:600;letter-spacing:.04em;margin-left:8px}
+.v-price-r{text-align:right}
+.v-price-r .price{font-size:16px;font-weight:700}
+.v-price-r .orig{font-size:12px;color:var(--light);text-decoration:line-through}
+.atc{width:100%;background:var(--black);color:#fff;border:none;padding:17px;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:6px;margin-bottom:12px;transition:background .25s}
+.atc:hover{background:var(--gold)}
+.del-info{display:flex;align-items:center;justify-content:space-between;background:#f4f4f4;border-radius:6px;padding:12px 16px;font-size:12px;color:var(--muted);margin-bottom:20px}
+.quote-blk{background:var(--cream);border-left:3px solid var(--gold);padding:16px 20px;border-radius:0 6px 6px 0;margin-bottom:22px}
+.quote-blk p{font-size:14px;font-style:italic;color:var(--muted);line-height:1.65}
+.quote-blk small{font-size:12px;color:var(--light);font-style:normal;display:block;margin-top:7px}
+.lm-list{margin-bottom:24px}
+.lm-row{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13px;border-bottom:1px solid var(--border)}
+.lm-row:last-child{border-bottom:none}
+.lm-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.acc{border-top:1px solid var(--border)}
+.acc-item{border-bottom:1px solid var(--border)}
+.acc-btn{width:100%;background:none;border:none;padding:16px 0;display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:500;cursor:pointer;color:var(--text);text-align:left}
+.acc-plus{color:var(--gold);font-size:20px;transition:transform .3s}
+.acc-item.open .acc-plus{transform:rotate(45deg)}
+.acc-body{font-size:13px;color:var(--muted);line-height:1.7;padding-bottom:16px;display:none}
+.acc-item.open .acc-body{display:block}
+
+/* SOCIAL / FRIENDS */
+.friends{background:var(--black);padding:60px 40px}
+.friends-inner{max-width:1280px;margin:0 auto}
+.friends-inner h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#fff;margin-bottom:28px;text-align:center;letter-spacing:.02em}
+.friends-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.friend-img{aspect-ratio:1;border-radius:8px;overflow:hidden}
+.friend-img img{width:100%;height:100%;object-fit:cover}
+
+/* PRESS */
+.press{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 40px}
+.press-inner{display:flex;gap:48px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:1280px;margin:0 auto}
+.press-logo{font-size:18px;color:#bbb;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-family:'Cormorant Garamond',serif}
+.press-logo.it{font-style:italic}
+
+/* BEFORE/AFTER SLIDERS */
+.ba-section{padding:80px 40px;background:var(--cream)}
+.section-hd{text-align:center;margin-bottom:48px}
+.section-hd .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.section-hd h2{font-family:'DM Serif Display',serif;font-size:40px;font-weight:400;margin-bottom:10px}
+.section-hd p{font-size:15px;color:var(--muted)}
+.ba-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.slider-wrap{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.ba-slider{position:relative;width:100%;aspect-ratio:.85;overflow:hidden;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.ba-img-after,.ba-img-before{position:absolute;inset:0;width:100%;height:100%}
+.ba-img-after img,.ba-img-before img{width:100%;height:100%;object-fit:cover}
+.ba-img-before{clip-path:inset(0 50% 0 0)}
+.ba-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-50%);z-index:10;pointer-events:none}
+.ba-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:#fff;border-radius:50%;z-index:11;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.25);pointer-events:none}
+.ba-handle svg{width:20px;height:20px;fill:none;stroke:var(--text);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ba-lbl{position:absolute;top:10px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.55);color:#fff;padding:2px 7px;border-radius:3px;z-index:12;pointer-events:none}
+.ba-lbl.before{left:8px}
+.ba-lbl.after{right:8px}
+.ba-body{padding:16px}
+.ba-verified{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--green);font-weight:600;margin-bottom:7px}
+.ba-body p{font-size:12px;color:var(--muted);line-height:1.55;font-style:italic;margin-bottom:8px}
+.ba-body .author{font-size:13px;font-weight:600;margin-bottom:3px}
+.ba-body .bstars{color:#f59e0b;font-size:12px}
+
+/* SCIENCE */
+.science{padding:80px 40px;background:#fff}
+.sci-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.sci-img{border-radius:12px;overflow:hidden}
+.sci-img img{width:100%;object-fit:cover}
+.sci-content h2{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;line-height:1.2;margin-bottom:16px}
+.sci-content p{font-size:15px;color:var(--muted);line-height:1.72;margin-bottom:20px}
+.lm-sci-list{display:flex;flex-direction:column;gap:14px}
+.lm-sci-item{display:flex;gap:12px;align-items:flex-start}
+.lm-sci-dot{width:13px;height:13px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.lm-sci-item h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.lm-sci-item p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+
+/* FRIENDS MARQUEE */
+.friends{background:var(--white);padding:25px 0}
+.friends-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#000000;text-align:center;letter-spacing:.02em;margin-bottom:32px;padding:0 40px}
+.marquee-track{overflow:hidden;width:100%}
+.marquee-inner{display:flex;gap:10px;width:max-content;animation:marquee 28s linear infinite}
+.marquee-inner:hover{animation-play-state:paused}
+.marquee-img{width:200px;height:30px;border-radius:10px;overflow:hidden;flex-shrink:0}
+/*.marquee-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}*/
+.marquee-img:hover img{transform:scale(1.04)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* CIRCULAR FEATURES SLIDER */
+.features{padding:80px 40px;background:#fff}
+.features-inner{max-width:1100px;margin:0 auto}
+.features-inner h2{font-family:'DM Serif Display',serif;font-size:38px;font-weight:400;text-align:center;margin-bottom:12px;line-height:1.15}
+.features-inner .sub{font-size:15px;color:var(--muted);text-align:center;margin-bottom:56px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.65}
+.feat-grid{display:grid;grid-template-columns:1fr 440px 1fr;gap:48px;align-items:center}
+.feat-col{display:flex;flex-direction:column;gap:36px}
+.feat-item{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.feat-item.right{align-items:flex-end;text-align:right}
+.feat-star{color:var(--gold);font-size:22px;margin-bottom:2px}
+.feat-text h4{font-size:15px;font-weight:700;margin-bottom:5px}
+.feat-text p{font-size:13px;color:var(--muted);line-height:1.55}
+
+/* CIRCULAR SLIDER */
+.circ-slider-wrap{display:flex;align-items:center;justify-content:center}
+.circ-slider{position:relative;width:420px;height:420px;border-radius:50%;overflow:hidden;cursor:ew-resize;user-select:none;-webkit-user-select:none;box-shadow:0 8px 40px rgba(0,0,0,.14)}
+.circ-after,.circ-before{position:absolute;inset:0;width:100%;height:100%}
+.circ-after img,.circ-before img{width:100%;height:100%;object-fit:cover}
+.circ-before{clip-path:inset(0 50% 0 0)}
+.circ-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-50%);z-index:10;pointer-events:none}
+.circ-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:#fff;border-radius:50%;z-index:11;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px rgba(0,0,0,.22);pointer-events:none}
+.circ-handle svg{width:22px;height:22px;fill:none;stroke:#555;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* TRUST BAR */
+.trust{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 40px;background:#fff}
+.trust-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.trust-item .ti-icon{font-size:26px}
+.trust-item h4{font-size:13px;font-weight:600}
+.trust-item p{font-size:12px;color:var(--muted);line-height:1.4}
+
+/* LIFESTYLE */
+.lifestyle{max-width:1280px;margin:60px auto;padding:0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ls-card{border-radius:10px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.ls-card img{width:100%;height:100%;object-fit:cover;display:block}
+.ls-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 60%)}
+.ls-text{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff}
+.ls-text h3{font-family:'DM Serif Display',serif;font-size:20px;font-weight:400;margin-bottom:4px}
+.ls-text p{font-size:13px;opacity:.85}
+
+/* MONEY BACK */
+.money-back{padding:80px 40px;background:var(--cream);text-align:center}
+.mb-inner{max-width:600px;margin:0 auto}
+.mb-inner h2{font-family:'DM Serif Display',serif;font-size:40px;font-weight:400;margin-bottom:16px}
+.mb-inner p{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:28px}
+.mb-img{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto 40px;border-radius:12px;overflow:hidden}
+.mb-img img{width:100%;height:280px;object-fit:cover}
+.shop-btn{display:inline-block;background:var(--gold);color:#fff;padding:15px 36px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;margin-bottom:20px;transition:background .2s}
+.shop-btn:hover{background:var(--black)}
+.mb-tags{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.mb-tag::before{content:'✓ ';color:var(--green);font-weight:700}
+
+/* FAQ */
+.faq{padding:80px 40px;background:#fff}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-tabs{display:flex;gap:8px;margin-bottom:36px;flex-wrap:wrap}
+.faq-tab{padding:10px 22px;border-radius:30px;border:1px solid var(--border);background:#fff;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.faq-tab.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:500;cursor:pointer;color:var(--text);text-align:left}
+.faq-q span{font-size:20px;color:var(--gold);transition:transform .3s}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.72;padding-bottom:20px;display:none}
+.faq-item.open .faq-a{display:block}
+
+.email-sg{background:var(--black);padding:60px 40px}
+.email-inner{max-width:500px;margin:0 auto;text-align:center}
+.email-inner p{color:#aaa;font-size:14px;margin-bottom:20px}
+.email-form{display:flex;max-width:400px;margin:0 auto}
+.email-form input{flex:1;padding:14px 18px;border:1px solid #444;background:#1a1a1a;color:#fff;font-size:14px;outline:none;border-right:none;font-family:'DM Sans',sans-serif}
+.email-form button{background:var(--gold);color:#fff;border:none;padding:14px 20px;cursor:pointer;font-size:16px}
+footer{background:var(--black);border-top:1px solid #1e1e1e;padding:40px}
+.ft-row{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-links{display:flex;gap:24px;flex-wrap:wrap}
+.ft-links a{color:#888;font-size:12px;transition:color .2s}
+.ft-links a:hover{color:#fff}
+.ft-copy{color:#555;font-size:12px}
+.ft-social{display:flex;gap:14px}
+.ft-social a{color:#888;font-size:13px;transition:color .2s}
+.ft-social a:hover{color:#fff}
+.pay-ic{display:inline-block;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:4px;padding:4px 8px;font-size:9px;color:#777;font-weight:700;margin:2px}
+
+@media(max-width:900px){
+  .prod-layout{grid-template-columns:1fr;gap:40px}
+  .gallery{position:static}
+  .sci-inner{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr 1fr}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .lifestyle{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .circ-slider{width:300px;height:300px}
+  header{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">Free Next Day Delivery in UAE 🇦🇪</div>
+
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">M<span>I</span>LKY MAKERS</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="hdr-icons">
+      <span class="lang">English ▾</span>
+      <a href="#">🔍</a><a href="#">👤</a><a href="#">🛒</a>
+    </div>
+  </div>
+</header>
+
+<div class="bc"><a href="index.html">Home</a><span>›</span><span>LED Light Therapy Face Mask</span></div>
+
+<!-- PRODUCT MAIN -->
+<div class="prod-layout">
+  <div class="gallery">
+    <div class="gallery-main">
+      <div class="sold-out-badge">Almost Sold Out</div>
+      <img id="mainImg" src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-front-view.jpg?v=1779986003&width=900" alt="SkinMirae LED Mask">
+    </div>
+    <div class="gallery-thumbs">
+      <div class="g-thumb active" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-front-view.jpg?v=1779986003&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-front-view.jpg?v=1779986003&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-red-light.jpg?v=1779985759&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-red-light.jpg?v=1779985759&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-lifestyle.jpg?v=1779985664&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-woman-lifestyle.jpg?v=1779985664&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/desert1-1.jpg?v=1779978213&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/desert1-1.jpg?v=1779978213&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-light-therapy-works-wavelengths.jpg?v=1779986231&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-light-therapy-works-wavelengths.jpg?v=1779986231&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-best-uae-dubai-delivery.jpg?v=1779985821&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-best-uae-dubai-delivery.jpg?v=1779985821&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-wavelengths-633nm-460nm-850nm-purple.jpg?v=1779985572&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-wavelengths-633nm-460nm-850nm-purple.jpg?v=1779985572&width=120" alt="">
+      </div>
+      <div class="g-thumb" onclick="setThumb(this,'https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-packaging-unboxing.jpg?v=1779985884&width=900')">
+        <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-face-mask-uae-packaging-unboxing.jpg?v=1779985884&width=120" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-info">
+    <div class="prod-rating">
+      <span class="stars">★★★★★</span>
+      <span class="cnt">1,416+ Reviews</span>
+    </div>
+    <h1>LED Light Therapy Face Mask</h1>
+    <div class="badges">
+      <div class="badge-r"><div class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>4 Light modes. Every skin concern</div>
+      <div class="badge-r"><div class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>CE certified. Independently tested</div>
+      <div class="badge-r"><div class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Visible results in 3 weeks</div>
+    </div>
+    <div class="price-blk">
+      <div class="price-main"><span class="cur">Dhs.</span> 699.00 <span class="aed">AED</span></div>
+      <div class="klarna">As low as 4 interest-free payments <span class="klarna-badge">Klarna</span> <a href="#">Learn more</a></div>
+    </div>
+    <div class="variants">
+      <div class="variant active" onclick="pickV(this)">
+        <div><div class="v-name">1 Mask</div><div class="v-desc">LED Light Therapy Face Mask</div></div>
+        <div class="v-price-r"><div class="price">Dhs. 699.00</div></div>
+      </div>
+      <div class="variant" onclick="pickV(this)">
+        <div>
+          <div class="v-name">Gift One, Keep One <span class="v-badge">Best Value</span></div>
+          <div class="v-desc">2 Masks — Save Dhs. 280</div>
+        </div>
+        <div class="v-price-r">
+          <div class="price">Dhs. 1,118.00</div>
+          <div class="orig">Dhs. 1,398.00</div>
+        </div>
+      </div>
+    </div>
+    <button class="atc">ADD TO CART</button>
+    <div class="del-info">
+      <span>🚚 Delivered by <strong>Tue, Jun 2</strong></span>
+      <span>Free Next-Day UAE Delivery</span>
+    </div>
+    <div class="quote-blk">
+      <p>"The UAE climate is working against your skin. This works for it."</p>
+      <small>The AC, the UV, the humidity — they damage your skin at the dermal layer. Serums cannot reach that deep. LED light can. Red (collagen) · Blue (acne) · Purple (dark spots) · Infrared (deep repair).</small>
+    </div>
+    <div class="lm-list">
+      <div class="lm-row"><div class="lm-dot" style="background:#ef4444"></div><span><strong>Red</strong> (633nm) — Stimulates collagen production to reduce fine lines</span></div>
+      <div class="lm-row"><div class="lm-dot" style="background:#3b82f6"></div><span><strong>Blue</strong> (460nm) — Targets acne-causing bacteria and clears breakouts</span></div>
+      <div class="lm-row"><div class="lm-dot" style="background:#b45309"></div><span><strong>Near-Infrared</strong> (850nm) — Penetrates deeper to firm and repair skin</span></div>
+      <div class="lm-row"><div class="lm-dot" style="background:#8b5cf6"></div><span><strong>Purple</strong> (Red + Blue) — Dual action to balance skin tone and fade dark spots</span></div>
+    </div>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn" onclick="togAcc(this)">🔬 How it works<span class="acc-plus">+</span></button><div class="acc-body">The SkinMirae LED mask delivers clinically-validated light wavelengths that penetrate the skin at different depths. Each session is 15–20 minutes, completely painless. Photobiomodulation triggers natural cellular responses — collagen synthesis, bacterial elimination, and deep tissue regeneration.</div></div>
+      <div class="acc-item"><button class="acc-btn" onclick="togAcc(this)">📋 How to use<span class="acc-plus">+</span></button><div class="acc-body">Cleanse your face. Put on the mask and select your light mode. Use for 15–20 minutes. Apply 4–5 times per week for the first 4 weeks, then 2–3 times weekly for maintenance.</div></div>
+      <div class="acc-item"><button class="acc-btn" onclick="togAcc(this)">📦 What's in the box<span class="acc-plus">+</span></button><div class="acc-body">1× SkinMirae Advanced LED Light Therapy Face Mask · 1× USB-C charging cable · 1× Protective storage pouch · 1× Quick-start guide · 1× Safety instructions booklet.</div></div>
+      <div class="acc-item"><button class="acc-btn" onclick="togAcc(this)">📐 Specifications<span class="acc-plus">+</span></button><div class="acc-body">Light modes: Red (633nm), Blue (460nm), Near-Infrared (850nm), Purple (Red+Blue). Session: 15–20 min. Charging: USB-C. Weight: Lightweight flexible design. Fits all face shapes. Material: Medical-grade flexible design.</div></div>
+      <div class="acc-item"><button class="acc-btn" onclick="togAcc(this)">🛡️ Safety &amp; certifications<span class="acc-plus">+</span></button><div class="acc-body">CE Certified — independently tested to EU safety standards for medical devices. No UV light, no heat damage, no downtime. Clinically tested across all skin types and tones.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FRIENDS MARQUEE -->
+<section class="friends">
+  <!-- <div class="friends-title">Friends of Milky Makers</div> -->
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> LumiVera Skincare</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> NovaDerm Solutions</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> AquaBloom Labs</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> Velora Skin Science</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> SereniGlow Beauty</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> EverPure Skin Co.</p>></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> LumiVera Skincare</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> NovaDerm Solutions</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> AquaBloom Labs</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> Velora Skin Science</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> SereniGlow Beauty</p>></div>
+      <div class="marquee-img"><p alt="Friend of SkinMirae"> EverPure Skin Co.</p>></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BEFORE & AFTER SLIDERS -->
+<section class="ba-section">
+  <div class="section-hd">
+    <div class="tag">Real Results</div>
+    <h2>Before &amp; Afters</h2>
+    <p>See the difference our results-driven devices make. Real users, real outcomes.</p>
+  </div>
+  <div class="ba-grid">
+
+    <div class="slider-wrap">
+      <div class="ba-slider" data-slider>
+        <div class="ba-img-after"><img src="https://skinmirae.com/cdn/shop/files/vermindert_onstekingen.webp?v=1768596010&width=750" alt="After"></div>
+        <div class="ba-img-before"><img src="https://skinmirae.com/cdn/shop/files/vermindert_onstekingen.webp?v=1768596010&width=750" alt="Before" style="filter:saturate(.45) brightness(.85)"></div>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/><polyline points="9,18 3,12 9,6" transform="translate(12,0) scale(-1,1)"/></svg></div>
+        <div class="ba-lbl before">BEFORE</div>
+        <div class="ba-lbl after">AFTER</div>
+      </div>
+      <div class="ba-body">
+        <div class="ba-verified">✓ Verified customer</div>
+        <p>"Redness has noticeably reduced and the complexion looks much calmer. The overall appearance feels more balanced, smoother, and comfortable throughout the day."</p>
+        <div class="author">Sofia R.</div><div class="bstars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="ba-slider" data-slider>
+        <div class="ba-img-after"><img src="https://skinmirae.com/cdn/shop/files/verbetert_de_teint.webp?v=1768596009&width=750" alt="After"></div>
+        <div class="ba-img-before"><img src="https://skinmirae.com/cdn/shop/files/verbetert_de_teint.webp?v=1768596009&width=750" alt="Before" style="filter:saturate(.45) brightness(.84)"></div>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/><polyline points="9,18 3,12 9,6" transform="translate(12,0) scale(-1,1)"/></svg></div>
+        <div class="ba-lbl before">BEFORE</div>
+        <div class="ba-lbl after">AFTER</div>
+      </div>
+      <div class="ba-body">
+        <div class="ba-verified">✓ Verified customer</div>
+        <p>"After completing 8 weeks, everything looks more even and naturally radiant. The texture feels smoother, appears healthier, and has a fresh glow that wasn't there before."</p>
+        <div class="author">Naomi B.</div><div class="bstars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="ba-slider" data-slider>
+        <div class="ba-img-after"><img src="https://skinmirae.com/cdn/shop/files/vermindert_fijne_lijntje__rimpels.webp?v=1768596010&width=750" alt="After"></div>
+        <div class="ba-img-before"><img src="https://skinmirae.com/cdn/shop/files/vermindert_fijne_lijntje__rimpels.webp?v=1768596010&width=750" alt="Before" style="filter:saturate(.45) brightness(.85)"></div>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/><polyline points="9,18 3,12 9,6" transform="translate(12,0) scale(-1,1)"/></svg></div>
+        <div class="ba-lbl before">BEFORE</div>
+        <div class="ba-lbl after">AFTER</div>
+      </div>
+      <div class="ba-body">
+        <div class="ba-verified">✓ Verified customer</div>
+        <p>"Skin looks smoother and more refined. Fine lines appear softer, with a fresher, more rested complexion."</p>
+        <div class="author">Margaret L.</div><div class="bstars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="ba-slider" data-slider>
+        <div class="ba-img-after"><img src="https://skinmirae.com/cdn/shop/files/maakt_de_huid_egaler.webp?v=1768596009&width=750" alt="After"></div>
+        <div class="ba-img-before"><img src="https://skinmirae.com/cdn/shop/files/maakt_de_huid_egaler.webp?v=1768596009&width=750" alt="Before" style="filter:saturate(.45) brightness(.86)"></div>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/><polyline points="9,18 3,12 9,6" transform="translate(12,0) scale(-1,1)"/></svg></div>
+        <div class="ba-lbl before">BEFORE</div>
+        <div class="ba-lbl after">AFTER</div>
+      </div>
+      <div class="ba-body">
+        <div class="ba-verified">✓ Verified customer</div>
+        <p>"I can't believe how much smoother and more balanced everything looks. Redness and uneven patches have visibly faded."</p>
+        <div class="author">Danielle R.</div><div class="bstars">★★★★★</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section class="science">
+  <div class="sci-inner">
+    <div class="sci-img">
+      <img src="https://skinmirae.com/cdn/shop/files/skinmirae-led-light-therapy-works-wavelengths.jpg?v=1779986231&width=800" alt="How LED light therapy works">
+    </div>
+    <div class="sci-content">
+      <h2>The LED mask works where serums can't reach.</h2>
+      <p>Powered by four clinically-backed light modes, each targeting a different skin concern — from acne and redness to fine lines and deep repair.</p>
+      <div class="lm-sci-list">
+        <div class="lm-sci-item"><div class="lm-sci-dot" style="background:#ef4444"></div><div><h4>Red Light (633nm)</h4><p>Stimulates collagen production to reduce fine lines and wrinkles</p></div></div>
+        <div class="lm-sci-item"><div class="lm-sci-dot" style="background:#3b82f6"></div><div><h4>Blue Light (460nm)</h4><p>Targets acne-causing bacteria and clears active breakouts</p></div></div>
+        <div class="lm-sci-item"><div class="lm-sci-dot" style="background:#b45309"></div><div><h4>Near-Infrared (850nm)</h4><p>Penetrates deeper to firm, tighten and repair skin</p></div></div>
+        <div class="lm-sci-item"><div class="lm-sci-dot" style="background:#8b5cf6"></div><div><h4>Purple (Red + Blue mix)</h4><p>Dual action mode to balance skin tone and fade dark spots</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIRCULAR BEFORE/AFTER FEATURES SLIDER -->
+<section class="features">
+  <div class="features-inner">
+    <h2>From Breakouts to Glow Instantly Noticeable Results</h2>
+    <p class="sub">Consistent LED light therapy helps reduce blemishes, calm redness, and reveal smoother, glowing skin all from the comfort of home.</p>
+    <div class="feat-grid">
+      <!-- LEFT COLUMN -->
+      <div class="feat-col">
+        <div class="feat-item">
+          <div class="feat-star">☆</div>
+          <div class="feat-text">
+            <h4>Red Light (600 nm)</h4>
+            <p>Promotes smoother texture and supports firmer-looking skin.</p>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-star">☆</div>
+          <div class="feat-text">
+            <h4>Blue Light (460 nm)</h4>
+            <p>Targets blemishes and breakouts for a clearer complexion.</p>
+          </div>
+        </div>
+      </div>
+      <!-- CIRCULAR SLIDER CENTER -->
+      <div class="circ-slider-wrap">
+        <div class="circ-slider" data-circ-slider>
+          <div class="circ-after">
+            <img src="https://skinmirae.com/cdn/shop/files/after_1-web.webp?v=1769759970&width=800" alt="After using SkinMirae">
+          </div>
+          <div class="circ-before">
+            <img src="https://skinmirae.com/cdn/shop/files/before-1-webp.webp?v=1769759970&width=800" alt="Before using SkinMirae">
+          </div>
+          <div class="circ-divider"></div>
+          <div class="circ-handle">
+            <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/><polyline points="9,6 15,12 9,18" transform="translate(0,0)"/></svg>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="feat-col">
+        <div class="feat-item right">
+          <div class="feat-star">☆</div>
+          <div class="feat-text">
+            <h4>Infrared (850 nm)</h4>
+            <p>Penetrates deeper layers to support skin recovery and renewal.</p>
+          </div>
+        </div>
+        <div class="feat-item right">
+          <div class="feat-star">☆</div>
+          <div class="feat-text">
+            <h4>Purple Light (Mix)</h4>
+            <p>Combines all benefits for balanced, radiant skin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="ti-icon">🚚</div><h4>Free Next-Day Delivery (UAE)</h4><p>Order today, receive tomorrow</p></div>
+    <div class="trust-item"><div class="ti-icon">💎</div><h4>Best Price</h4><p>Premium skincare at an affordable price</p></div>
+    <div class="trust-item"><div class="ti-icon">↩</div><h4>Hassle-Free Returns</h4><p>Easy 14-day exchange with a free return label</p></div>
+    <div class="trust-item"><div class="ti-icon">💳</div><h4>Pay with Tabby</h4><p>Split your payment into 4 interest-free installments</p></div>
+  </div>
+</div>
+
+<!-- LIFESTYLE -->
+<div class="lifestyle">
+  <div class="ls-card">
+    <img src="https://skinmirae.com/cdn/shop/files/undefined_kan_je_nu_een_vrouw.avif?v=1760814355&width=800" alt="Relax">
+    <div class="ls-overlay"></div>
+    <div class="ls-text"><h3>Relax &amp; Recharge</h3><p>Turn your bedtime into a spa-level skincare routine with visible results.</p></div>
+  </div>
+  <div class="ls-card">
+    <img src="https://skinmirae.com/cdn/shop/files/undefined_kan_je_de_gordijnen.avif?v=1760814325&width=800" alt="Glow">
+    <div class="ls-overlay"></div>
+    <div class="ls-text"><h3>Glow Anytime</h3><p>10 minutes a day is all it takes for clinically-backed, lasting results.</p></div>
+  </div>
+  <div class="ls-card">
+    <img src="https://skinmirae.com/cdn/shop/files/undefined_Kan_je_nu_een_donker_1.avif?v=1760814355&width=800" alt="Self-Care">
+    <div class="ls-overlay"></div>
+    <div class="ls-text"><h3>Self-Care Made Simple</h3><p>If you can set aside 15 minutes, this routine is accessible for all skin types.</p></div>
+  </div>
+</div>
+
+<!-- MONEY BACK -->
+<section class="money-back">
+  <div class="mb-inner">
+    <div class="mb-img">
+      <div class="ba-img-wrap"><img src="https://skinmirae.com/cdn/shop/files/undefined_Kan_je_nu_een_donker_1.avif?v=1760814355&width=600" alt=""></div>
+      <div class="ba-img-wrap"><img src="https://skinmirae.com/cdn/shop/files/remove_watermark_image_20251018_222209.avif?v=1760813962&width=600" alt=""></div>
+    </div>
+    <h2><strong>Money-Back</strong> Guarantee</h2>
+    <p>Radical transparency. We built this to last, but if life happens, you're fully covered with our no-questions-asked replacement or refund policy.</p>
+    <a href="#" class="shop-btn">Shop now</a>
+    <div class="mb-tags">
+      <span class="mb-tag">No questions asked</span>
+      <span class="mb-tag">Easy replacement or refund</span>
+      <span class="mb-tag">Customer support that actually helps</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-hd">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find everything you need to know about the SkinMirae Advanced LED Light Face Mask: safety, results, and delivery.</p>
+    </div>
+    <div class="faq-tabs">
+      <button class="faq-tab active" onclick="faqTab(this)">General Information</button>
+      <button class="faq-tab" onclick="faqTab(this)">Product Information</button>
+      <button class="faq-tab" onclick="faqTab(this)">Shipping &amp; Delivery</button>
+    </div>
+    <div class="faq-item open"><button class="faq-q" onclick="togFaq(this)">What is SkinMirae?<span>+</span></button><div class="faq-a">SkinMirae is a premium skincare brand offering advanced LED light therapy masks designed to improve skin clarity, smoothness, and radiance at home.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">Who is SkinMirae suitable for?<span>+</span></button><div class="faq-a">SkinMirae is suitable for most skin types and is designed for anyone looking to improve skin appearance, tone, texture and overall radiance.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">Is the LED mask safe to use?<span>+</span></button><div class="faq-a">Yes. The SkinMirae Advanced LED Mask is clinically tested, CE-certified, and approved for all skin types. It is non-invasive, completely pain-free, and gentle on the skin.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">How often should I use it?<span>+</span></button><div class="faq-a">For best results, use the mask 10 minutes per session, 3–5 times per week.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">When will I start seeing results?<span>+</span></button><div class="faq-a">Most users notice visible improvements within 3 weeks of consistent use. Results continue to build with regular sessions.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">Do you ship across the UAE?<span>+</span></button><div class="faq-a">Yes! We deliver across all Emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Ras Al Khaimah, and Umm Al Quwain.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="togFaq(this)">How fast is delivery?<span>+</span></button><div class="faq-a">We offer Free Next-Day Delivery across the UAE on all orders.</div></div>
+  </div>
+</section>
+
+<div class="email-sg">
+  <div class="email-inner">
+    <p>Glow with us and get skincare tips &amp; offers</p>
+    <div class="email-form"><input type="email" placeholder="Email"><button>→</button></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-row">
+    <div class="ft-copy">© 2026, SkinMirae</div>
+    <div class="ft-links"><a href="#">Privacy policy</a><a href="#">Terms of service</a><a href="#">Refund policy</a><a href="#">Shipping policy</a></div>
+    <div class="ft-social"><a href="https://www.facebook.com/SkinMirae/">Facebook</a><a href="https://www.instagram.com/SkinMirae/">Instagram</a></div>
+  </div>
+  <div class="ft-row" style="margin-top:16px">
+    <div><span class="pay-ic">VISA</span><span class="pay-ic">MC</span><span class="pay-ic">AMEX</span><span class="pay-ic">APPLE PAY</span><span class="pay-ic">GOOGLE PAY</span><span class="pay-ic">TABBY</span><span class="pay-ic">JCB</span></div>
+    <select style="background:#111;color:#888;border:1px solid #2a2a2a;padding:6px 12px;font-size:12px;border-radius:4px"><option>English</option></select>
+  </div>
+</footer>
+
+<script>
+function setThumb(el,src){document.querySelectorAll('.g-thumb').forEach(t=>t.classList.remove('active'));el.classList.add('active');document.getElementById('mainImg').src=src}
+function pickV(el){document.querySelectorAll('.variant').forEach(v=>v.classList.remove('active'));el.classList.add('active')}
+function togAcc(btn){const item=btn.closest('.acc-item'),open=item.classList.contains('open');document.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open')}
+function togFaq(btn){const item=btn.closest('.faq-item'),open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open')}
+function faqTab(btn){document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active')}
+
+/* Circular Before/After Slider */
+document.querySelectorAll('[data-circ-slider]').forEach(slider=>{
+  const before=slider.querySelector('.circ-before');
+  const divider=slider.querySelector('.circ-divider');
+  const handle=slider.querySelector('.circ-handle');
+  let dragging=false;
+  function setPos(pct){
+    pct=Math.max(0,Math.min(100,pct));
+    before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    divider.style.left=pct+'%';
+    handle.style.left=pct+'%';
+  }
+  setPos(50);
+  function getPos(e){const r=slider.getBoundingClientRect(),x=e.touches?e.touches[0].clientX:e.clientX;return((x-r.left)/r.width)*100}
+  slider.addEventListener('mousedown',e=>{dragging=true;setPos(getPos(e));e.preventDefault()});
+  slider.addEventListener('touchstart',e=>{dragging=true;setPos(getPos(e))},{passive:true});
+  window.addEventListener('mousemove',e=>{if(dragging)setPos(getPos(e))});
+  window.addEventListener('touchmove',e=>{if(dragging)setPos(getPos(e))},{passive:true});
+  window.addEventListener('mouseup',()=>dragging=false);
+  window.addEventListener('touchend',()=>dragging=false);
+});
+
+/* Before/After Sliders */
+document.querySelectorAll('[data-slider]').forEach(slider=>{
+  const before=slider.querySelector('.ba-img-before');
+  const divider=slider.querySelector('.ba-divider');
+  const handle=slider.querySelector('.ba-handle');
+  let dragging=false;
+  function setPos(pct){
+    pct=Math.max(0,Math.min(100,pct));
+    before.style.clipPath=`inset(0 ${100-pct}% 0 0)`;
+    divider.style.left=pct+'%';
+    handle.style.left=pct+'%';
+  }
+  setPos(50);
+  function getPos(e){const r=slider.getBoundingClientRect(),x=e.touches?e.touches[0].clientX:e.clientX;return((x-r.left)/r.width)*100}
+  slider.addEventListener('mousedown',e=>{dragging=true;setPos(getPos(e));e.preventDefault()});
+  slider.addEventListener('touchstart',e=>{dragging=true;setPos(getPos(e))},{passive:true});
+  window.addEventListener('mousemove',e=>{if(dragging)setPos(getPos(e))});
+  window.addEventListener('touchmove',e=>{if(dragging)setPos(getPos(e))},{passive:true});
+  window.addEventListener('mouseup',()=>dragging=false);
+  window.addEventListener('touchend',()=>dragging=false);
+});
+</script>
+</body>
+</html>
